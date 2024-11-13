@@ -1,0 +1,55 @@
+* {
+    background-color: blueviolet;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+section.cookie-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    /* use CSS var() function to reference a variable created above */
+    background-color: var(--dark);
+    color: var(--light);
+  }
+  
+  h1 {
+    font-size: 200%;
+  }
+  h2 {
+    margin: 2% 0;
+    font-size: 250%;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    background-color: var(--dark);
+    color: var(--light);
+  }

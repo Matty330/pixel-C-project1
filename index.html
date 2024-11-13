@@ -8,27 +8,36 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
-    <!-- Header or Title -->
-    <h1>Crack the Fortune Cookie</h1>
+
+<header> 
+    <h1>Crack the Fortune Cookie</h1> 
+</header>
+
+<body> 
 
     <!-- Fortune Cookie Image and Fortune Display Area -->
-    <div id="cookie-container">
-        <img id="whole-cookie" src="whole-cookie.png" alt="Fortune Cookie">
-        <img id="broken-cookie" src="broken-cookie.png" alt="Broken Fortune Cookie" style="display: none;">
-        <div id="fortune-slip" style="display: none;">Your fortune will appear here!</div>
-    </div>
+    <section class = "cookie-container">
+        <img id= "whole-cookie" src= "whole-cookie.png" alt= "Fortune Cookie">
+        <img id= "broken-cookie" src= "broken-cookie.png" alt= "Broken Fortune Cookie" style="display: none;">
+        <h3 id= "fortune-slip" style= "display: none;">Your fortune will appear here!</h3>
+    </section>
 
     <!-- Button to "Crack the Cookie" -->
-    <button id="crack-btn" class="btn">Crack the Cookie</button>
+     <section>
+        <button id="crack-btn" class="btn">Crack the Cookie</button>
+     </section>
+    
 
     <!-- Language Selector -->
+<p>
     <label for="language-select">Choose a language:</label>
     <select id="language-select">
         <option value="english">English</option>
         <option value="spanish">Español</option>
         <option value="french">Français</option>
     </select>
+</p>
+
 
     <!-- Link to JavaScript file (we'll add functionality later) -->
     <script src="./assets/js/script.js"></script>
