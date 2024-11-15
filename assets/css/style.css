@@ -1,53 +1,87 @@
+/* reset.css - optional reset styles, if needed */
 * {
-    background-color: blueviolet;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-* {
-  box-sizing:border-box;
-width: 100%;
-}
+
+/* style.css */
+
 body {
-    display: flex;
-    justify-content:center;
-    min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: grid;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center;     /* Centers content vertically */
+  height: 100vh;           /* Makes the body take the full viewport height */
+  margin: 0;               /* Removes any default margin */
+  background-image: url('../assets/images/background.jpg');
+  background-size: cover;       /* Scales the image to cover thewhole page */
+  background-position: center;  /* Centers the image */
 }
 
 header {
-  display:block;
-  justify-content: space-between;
-  padding: 1%;
+  text-align: center;
+  padding: 1rem;
 }
-nav.language-select {
-display: block;
+
+h1 {
+  font-size: 2rem;
+  color: #4a4a4a;
 }
-  h1 {
-    font-size: 200%;
-  }
-  h2 {
-    margin: 2% 0;
-    font-size: 250%;}
 
-section.cookie-container {
-  display:block;
+/* Center everything on the page */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
 }
-.cookie-container img{
-  width: 50%;
-  min-width: 400px;
 
-};
+/* Fortune Cookie Section Styling */
+.cookie-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
 
-  button {
-    margin-top: 20px;
-    padding: 10px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-  }
-  
-  footer {
-    display: flex;
-    justify-content: center;
-    padding: 2%;
-    background-color: var(--dark);
-    color: var(--light);
-  }
+.cookie-container img {
+  max-width: 150px;
+  margin: 1rem;
+}
+
+#fortune-slip {
+  font-size: 1.2rem;
+  color: #4a4a4a;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Button styling */
+button.btn {
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #3273dc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.btn:hover {
+  background-color: #275ab8;
+}
+
+/* Language Selector Styling */
+nav {
+  margin-bottom: 2rem;
+}
+
+#language-select {
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
