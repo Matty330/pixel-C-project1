@@ -33,11 +33,22 @@ const changeLanguage = () => {
         default:
             title.textContent = 'Crack the Fortune Cookie';
     }
-}
+};
 
-const button = document.getElementById('ChangeCookie');
 const WholeCooke = document.getElementById('whole-cookie');
-
+const button = document.getElementById('ChangeCookie');
 let isWholeCookie =true;
+button.removeEventListener('click',() => {
+    WholeCooke.classList.add('hidden'); // Fade out the whole-cookie
 
-button.removeEventListener('click',)
+ // Wait for the fade-out transition, then change the source from whole-cookie to broken-cookie
+    setTimeout(() => {
+    if (isWholeCookie) {
+        WholeCooke.src = '../images/whole-cookie.png';
+    } else {
+        WholeCooke.src = '../images/broken-cookie.png';
+    }
+    isWholeCookie = ! isWholeCookie;
+    WholeCooke.classList.remove('hidden'); // Fade the image back in
+ }, 500); // Match this to the CSS transition duration   
+});
