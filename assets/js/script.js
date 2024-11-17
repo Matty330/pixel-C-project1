@@ -34,3 +34,10 @@ const changeLanguage = () => {
             title.textContent = 'Crack the Fortune Cookie';
     }
 }
+
+const button = document.getElementById('ChangeCookie');
+const WholeCooke = document.getElementById('whole-cookie');
+
+let isWholeCookie =true;
+
+button.removeEventListener('click',)
