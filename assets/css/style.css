@@ -1,21 +1,8 @@
-/* reset.css - 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-/* style.css */
-/* ::backdrop {
-  background-image: linear-gradient(
-    45deg,
-    magenta,
-    rebeccapurple,
-    dodgerblue,
-    green
-  );
-  opacity: 0.75;
-}; */
+};
 
 body {
   font-family: Arial, sans-serif;
