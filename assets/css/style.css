@@ -41,14 +41,15 @@ main {
 }
 
 /* Fortune Cookie Section Styling */
-.cookie-container {
+.changeCookie-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
+  cursor: pointer;
 }
 
-.cookie-container img {
+.changeCookie-container img {
   max-width: 300px;
   margin: 1rem;
   transition: transform 0.5s ease-in-out;
@@ -58,6 +59,9 @@ main {
   opacity: 0;
 }
 
+.visible { 
+  opacity: 100%;
+}
 #fortune-slip {
   font-size: 1.2rem;
   color: #4a4a4a;
