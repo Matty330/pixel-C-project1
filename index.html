@@ -10,10 +10,27 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body> 
+    <!-- Modal Structure -->
+    <dialog id="pageModal" class="modal">
+        <h1>✨ Discover Your Fortune! ✨</h1>
+
+        <h2>💬 "Your next big break could be just a click away."</h2>
+        <p>Open your digital fortune cookie now to reveal an inspiring message, a daily dose of good luck, or maybe even a little fun surprise!</p>
+
+        <h2> 🎉 Why wait? Let fate guide your day! 🎉</h2>
+        <p> Click below to crack open your cookie 🍪👇</p>
+
+        <div>
+            <button id="closeModal" >Exit Page</button>
+            <button id="gotoForturn" type="submit">Open My Cookie!</button>
+        </div>
+    </dialog>
+
     <header class="has-text-centered">
         <h1 id="title">Crack the Fortune Cookie</h1> 
     </header>
     
+    <!-- Choice of Language -->
     <nav class="container has-text-centered"> 
         <label for="language-select">Choose a language:</label>
             <select id="language-select" onchange="changeLanguage()">
@@ -24,14 +41,16 @@
         </div>
     </nav>
 
+
+
+    <!-- Forture and Cookie -->
     <main class="container has-text-centered">
         <section class="changeCookie-container">
-            <img id="whole-cookie" class="visible" src="./assets/images/whole-cookie.png" alt="Fortune Cookie">
-            <h3 id="fortune-slip" style="display: none;">Your fortune will appear here!</h3>
+            <img id="whole-cookie" class="images" src="./assets/images/whole-cookie.png" alt="Fortune Cookie">
+            <h3 id="fortuneDisplay" class="mt-4";"></h3>
         </section>
 
         <button id="getFortune" class="button is-primary is-large">Crack the Cookie</button>
-        <div id="fortuneDisplay" class="mt-4"></div>
     </main>
 
     <!-- Link to JavaScript file -->

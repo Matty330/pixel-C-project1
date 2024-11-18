@@ -1,4 +1,33 @@
-const fortune = [
+
+// Modal JS
+
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("pageModal");
+    const closeBtn = document.getElementById("closeModal");
+    const body = document.body;
+    const goFortune = document.getElementById("gotoForturn");
+
+    // Show the modal on page load
+    modal.style.display = "flex";
+    body.classList.remove("default-bg");
+    body.classList.add("modal-bg");
+
+    // Close the modal when the Open My cookie button is clicked
+    goFortune.addEventListener("click", () => {
+    modal.style.display = "none";
+    body.classList.remove("modal-bg");
+    body.classList.add("default-bg");
+    }) ;
+     // Close the page when the "Exit Page<" button is clicked
+    closeBtn.addEventListener("click", () => {
+    window.close();
+    });
+    
+});
+
+
+// Get your Fortune    
+ ;const fortune = [
     "You will have a great day!",
     "You are in for a big surprise!",
     "Your future is filled with uncertainty!",
@@ -22,26 +51,15 @@ button.addEventListener('click', () => {
 let isWholeCookie =true;
 button.addEventListener('click',() => {
 
-    // Fade out the whole-cookie
+    // Change the out the whole-cookie to broken cookie
 
     isWholeCookie =false
     WholeCookie.src = './assets/images/broken-cookie.png';
     WholeCookie.alt = 'A broken fortune cookie';
     console.log('The cookie broke!');
-
-
- // Wait for the fade-out transition, then change the source from whole-cookie to broken-cookie
-    setTimeout(() => {
-    if (isWholeCookie) {
-        WholeCooke.src = '../images/whole-cookie.png';
-    } else {
-        WholeCooke.src = '../images/broken-cookie.png';
-    }
-    isWholeCookie = ! isWholeCookie;
-    WholeCooke.classList.remove('hidden'); // Fade the image back in
- }, 500); // Match this to the CSS transition duration   
 });
 
+    // Select langage from dropdown
 const changeLanguage = () => {
     const languageSelect = document.getElementById('language-select');
     const title = document.getElementById('title');

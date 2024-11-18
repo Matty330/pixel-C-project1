@@ -1,4 +1,4 @@
-/* reset.css - optional reset styles, if needed */
+/* reset.css - 
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +6,16 @@
 }
 
 /* style.css */
+/* ::backdrop {
+  background-image: linear-gradient(
+    45deg,
+    magenta,
+    rebeccapurple,
+    dodgerblue,
+    green
+  );
+  opacity: 0.75;
+}; */
 
 body {
   font-family: Arial, sans-serif;
@@ -20,7 +30,27 @@ body {
   background-image: url('../images/background.jpg');
   background-size: cover;       /* Scales the image to cover thewhole page */
   background-position: center;  /* Centers the image */
+  transition: background-color 0.3s ease; /* Smooth background color change */
 }
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(244, 234, 234, 0.834); /* Semi-transparent modal overlay */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+};
+
+.close-btn:hover {
+  background-color: #0056b3;
+};
+
 
 header {
   text-align: center;
@@ -28,8 +58,22 @@ header {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #4a4a4a;
+  font-weight: bold;
+
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #4a4a4a;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1rem;
+  color: #4a4a4a;
+  font-weight: bold;
 }
 
 /* Center everything on the page */
@@ -42,31 +86,30 @@ main {
 
 /* Fortune Cookie Section Styling */
 .changeCookie-container {
-  display: flex;
+  position: relative;
+  display: inline-block;
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
   cursor: pointer;
 }
 
-.changeCookie-container img {
-  max-width: 300px;
+.images {
+  max-width: 400px;
   margin: 1rem;
-  transition: transform 0.5s ease-in-out;
 }
 
-.hidden {
-  opacity: 0;
-}
-
-.visible { 
-  opacity: 100%;
-}
-#fortune-slip {
+#fortuneDisplay {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
   font-size: 1.2rem;
   color: #4a4a4a;
   text-align: center;
   margin-top: 1rem;
+  background-color: rgba(230, 223, 223, 0.183); /* semi-transparent background */
+  padding: 1px; /*  padding around text */
 }
 
 /* Button styling */
