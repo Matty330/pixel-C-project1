@@ -4,34 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fortune Cookie App</title>
+    <!-- Link to CSS file (we'll add it later) -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header class="navbar"> 
-        <h1 id="title">Crack the Fortune Cookie</h1>
+    <!-- Header or Title -->
+    <h1>Crack the Fortune Cookie</h1>
 
-        <nav>
-            <label for="language-select">Choose a language:</label>
-            <select id="language-select" onchange="changeLanguage()">
-                <option value="english">English</option>
-                <option value="spanish">Español</option>
-                <option value="french">Français</option>
-            </select>
-        </nav>
-    </header>
-    
+    <!-- Fortune Cookie Image and Fortune Display Area -->
     <div id="cookie-container">
         <img id="whole-cookie" src="whole-cookie.png" alt="Fortune Cookie">
         <img id="broken-cookie" src="broken-cookie.png" alt="Broken Fortune Cookie" style="display: none;">
         <div id="fortune-slip" style="display: none;">Your fortune will appear here!</div>
     </div>
 
-    <button id="getFortune" class="btn">Crack the Cookie</button>
-    <div id="fortuneDisplay"></div>
+    <!-- Button to "Crack the Cookie" -->
+    <button id="crack-btn" class="btn">Crack the Cookie</button>
 
+    <!-- Language Selector -->
+    <label for="language-select">Choose a language:</label>
+    <select id="language-select">
+        <option value="english">English</option>
+        <option value="spanish">Español</option>
+        <option value="french">Français</option>
+    </select>
 
-
+    <!-- Link to JavaScript file (we'll add functionality later) -->
     <script src="./assets/js/script.js"></script>
 </body>
+git 
 </html>
