@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Get your Fortune    
- ;const fortune = [
+const fortune = [
     "You will have a great day!",
     "You are in for a big surprise!",
     "Your future is filled with uncertainty!",
@@ -61,7 +61,7 @@ button.addEventListener('click',() => {
 
     // Select langage from dropdown
 const changeLanguage = () => {
-    const languageSelect = document.getElementById('language-select');
+    const languageSelect = document.getElementById('languageSelector');
     const title = document.getElementById('title');
     const results = document.getElementById('getFortune');
     switch (languageSelect.value) {
@@ -81,6 +81,7 @@ const changeLanguage = () => {
             title.textContent = 'Crack the Fortune Cookie';
     }
 };
+
  // Language functions
 function setLanguage(language) {
     localStorage.setItem('selectedLanguage', language);
@@ -101,7 +102,7 @@ function getFortuneHistory() {
 document.getElementById('languageSelector').addEventListener('change', function() {
     setLanguage(this.value);
 });
-document.getElementById('generateFortune').addEventListener('click', function() {
+document.getElementById('getFortune').addEventListener('click', function() {
     const fortunes = [
         "You will have a great day!",
         "You are in for a big surprise!",
@@ -115,15 +116,3 @@ document.getElementById('generateFortune').addEventListener('click', function() 
 });
 // Load initial settings
 document.getElementById('languageSelector').value = getLanguage();
-
-React
-
-Reply
-
-
-
-
-
-
-
-
