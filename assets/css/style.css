@@ -1,11 +1,8 @@
-/* reset.css - optional reset styles, if needed */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-/* style.css */
+};
 
 body {
   font-family: Arial, sans-serif;
@@ -17,10 +14,30 @@ body {
   align-items: center;     /* Centers content vertically */
   height: 100vh;           /* Makes the body take the full viewport height */
   margin: 0;               /* Removes any default margin */
-  background-image: url('../assets/images/background.jpg');
+  background-image: url('../images/background.jpg');
   background-size: cover;       /* Scales the image to cover thewhole page */
   background-position: center;  /* Centers the image */
+  transition: background-color 0.3s ease; /* Smooth background color change */
 }
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(244, 234, 234, 0.834); /* Semi-transparent modal overlay */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+};
+
+.close-btn:hover {
+  background-color: #0056b3;
+};
+
 
 header {
   text-align: center;
@@ -28,8 +45,22 @@ header {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #4a4a4a;
+  font-weight: bold;
+
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #4a4a4a;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1rem;
+  color: #4a4a4a;
+  font-weight: bold;
 }
 
 /* Center everything on the page */
@@ -41,26 +72,31 @@ main {
 }
 
 /* Fortune Cookie Section Styling */
-.cookie-container {
-  display: flex;
+.changeCookie-container {
+  position: relative;
+  display: inline-block;
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
-  flex: 1 1 100%; /* Full width on small screens */
-    margin: 10px;
 }
 
-.cookie-container img {
-  max-width: 150px;
+.images {
+  max-width: 400px;
   margin: 1rem;
   height: auto;
 }
 
-#fortune-slip {
+#fortuneDisplay {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
   font-size: 1.2rem;
   color: #4a4a4a;
   text-align: center;
   margin-top: 1rem;
+  background-color: rgba(230, 223, 223, 0.183); /* semi-transparent background */
+  padding: 1px; /*  padding around text */
 }
 
 /* Button styling */
@@ -87,23 +123,4 @@ nav {
   font-size: 1rem;
   border-radius: 4px;
   border: 1px solid #ddd;
-}
-
-
-body {
-  font-size: 16px;
-  padding: 10px;
-}
-
-@media (min-width: 768px) {
-  body {
-      font-size: 18px;
-      padding: 20px;
-  }
-}
-
-@media (min-width: 768px) {
-  .cookie-container {
-      flex: 1 1 45%; /* Two columns on larger screens */
-  }
 }
